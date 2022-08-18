@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 Regiseter
+  form(action="/register", method="post") 
+    div(class="flex mb-4", data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for="email", class="block") Email
+        input(type="email", id="email", name="email")
+    
+    div(class="flex mb-4" data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for="password", class="block") pasword
+        input(type="password", id="password", name="password")
+    
+    div(class="flex mb-4", data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for="address", class="block") address
+        input(type="text", id="address", name="address")
+    
+    div(data-role='fieldcontain')
+      input(type="submit",value='register',data-transition='fade', data-theme='c')

@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  whammy_db:
+    container_name: whammy
+    image: mysql:5.7
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: whammy
+      MYSQL_USER: whammy
+      MYSQL_PASSWORD: whammy
+      MYSQL_ROOT_PASSWORD: whammy
+    volumes:
+      - whammy:/var/lib/mysql
+
+networks:
+  whammy:
+    name: whammy
+    driver: bridge
+
+volumes:
+  whammy:
