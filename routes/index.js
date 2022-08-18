@@ -29,7 +29,6 @@ router.post('/signup', signUp, function(req, res) {
   req.session.User = {
     email: req.body.email
   }
-
   res.redirect('/')
 });
 
